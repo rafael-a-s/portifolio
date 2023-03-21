@@ -1,7 +1,7 @@
 import style from '../../styles/Portifolio.module.css';
-import avatar from '../../../public/images/avatar.png';
+import avatar from '../../public/images/avatar.png';
 import { FiExternalLink } from 'react-icons/fi';
-export default function Portifolio() {
+export default function Page() {
   return (
     <section className={style.portifolio} id={style.portifolio}>
       <h2 className={style.heading}>Meus <span>Projetos</span></h2>

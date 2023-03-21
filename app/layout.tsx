@@ -1,5 +1,7 @@
-import Footer from "@/pages/layout/footer"
-import HeaderPage from "@/pages/layout/header"
+import { Main } from 'next/document';
+import Footer from '../public/components/footer/footer';
+import HeaderPage from '../public/components/header/header';
+import './styles/globals.css';
 
 export default function RootLayout({
   children,
@@ -11,7 +13,7 @@ export default function RootLayout({
       <head></head>
       <body>
         <HeaderPage/>
-          {children}
+          <main>{children}</main>
         <Footer/>
       </body>
     </html>
