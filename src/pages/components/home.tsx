@@ -2,6 +2,7 @@ import { FiFacebook, FiTwitter, FiInstagram, FiLinkedin } from 'react-icons/fi';
 import style from '../../styles/Home.module.css';
 import Button from '../utils/button';
 import avatar from '/public/images/avatar.png';
+
 export default function Home(){
   return (
     <section className={style.home} id={style.home}>
