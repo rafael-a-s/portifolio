@@ -1,10 +1,10 @@
 import style from '../../styles/About.module.css';
-import avatar from '../../../public/images/avatar.png';
 import Button from '../../public/components/button/button';
+import avatar from '../../public/images/avatar.png';
 
-export default function About() {
+export default function Page() {
   return ( 
-    <section className={style.about} id={style.aout}>
+    <section className={style.about} id={style.about}>
       <div className={style.about_img}>
         <img src={avatar.src} alt="Imagem do um desenvolvedor" />
       </div>
