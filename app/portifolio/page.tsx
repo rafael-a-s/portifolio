@@ -1,12 +1,31 @@
+'use client';
 import style from '../../styles/Portifolio.module.css';
 import avatar from '../../public/images/avatar.png';
 import { FiExternalLink } from 'react-icons/fi';
+import { useEffect } from 'react';
+import React from 'react';
+import { configScrollReveal } from '../../public/config/configScrollReveal';
+
 export default function Page() {
+
+  const refToComponent = React.useRef(null);
+  const refToBox = React.useRef(null);
+
+  useEffect(() => {
+    async function animate() {
+      const sr = (await import("scrollreveal")).default
+      sr(configScrollReveal);
+      refToComponent.current ?  sr().reveal(refToComponent.current, {origin: 'top'} ) : null;
+      refToBox.current ?  sr().reveal(refToBox.current, {origin: 'bottom'} ) : null;
+    }
+    animate()
+  },[]);
+
   return (
     <section className={style.portifolio} id={style.portifolio}>
-      <h2 className={style.heading}>Meus <span>Projetos</span></h2>
+      <h2 ref={refToComponent} className={style.heading}>Meus <span>Projetos</span></h2>
       <div className={style.portifolio_container}>
-        <div className={style.portifolio_box}>
+        <div ref={refToBox} className={style.portifolio_box}>
           <img src={avatar.src} alt="Imagem provisoria" />
           <div className={style.portifolio_layer}>
             <h4>Web Desing</h4>
