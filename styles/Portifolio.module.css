@@ -78,3 +78,26 @@
   background: var(--text-color);
   border-radius: 50%;
 }
+
+@media (max-width: 991px) {
+  .portifolio {
+    padding-bottom: 7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .portifolio h2 {
+    margin-bottom: 3rem;
+  }
+
+  .portifolio_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 617px) {
+  .portifolio_container {
+    grid-template-columns: 1fr;
+  }
+
+}

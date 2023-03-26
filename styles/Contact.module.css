@@ -43,3 +43,16 @@
   margin-top: 2rem;
   cursor: pointer;
 }
+
+@media (max-width: 991px) {
+  .contact {
+    min-height: 94vh;
+  }
+
+}
+
+@media (max-width: 450px){
+  .contact form .input_box input {
+    width: 100%;
+  }
+}
