@@ -2,7 +2,7 @@
 import style from '../styles/Home.module.css';
 import { FiFacebook, FiTwitter, FiInstagram, FiLinkedin } from 'react-icons/fi';
 import Button from '../public/components/button/button';
-import avatar from '../public/images/avatar.png';
+import avatar from '../public/images/rafa3.png'
 import React, { useEffect } from 'react';
 import { configScrollReveal } from '../public/config/configScrollReveal';
 import Typed from 'typed.js';
