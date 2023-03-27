@@ -27,6 +27,7 @@ export class Service {
       name: repository.name,
       description: repository.description,
       html_url: repository.html_url,
+      img_url: repository.homepage
     }));
 
     return projects;

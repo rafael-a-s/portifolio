@@ -41,7 +41,7 @@ export default function Page() {
       <div className={style.portifolio_container} >
         {projects.map((project, index) => (
           <div ref={refToBox} className={style.portifolio_box}>
-          <img src={avatar.src} alt="Imagem do projeto" />
+          <img src={`${project.img_url ?  project.img_url  : avatar.src}`} alt="Imagem do projeto" />
           <div className={style.portifolio_layer}>
             <h4>{project.name}</h4>
             <p>{project.description}</p>
