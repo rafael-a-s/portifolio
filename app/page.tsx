@@ -49,6 +49,7 @@ export default function Page() {
         <Button text='Download CV'/>
       </div>
       <div ref={refToImg} className={style.home_img}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={avatar.src} alt="Avatar de um desenvolvedor" />
       </div>
     </section>

@@ -1,4 +1,3 @@
-import { Main } from 'next/document';
 import Footer from '../public/components/footer/footer';
 import HeaderPage from '../public/components/header/header';
 import './styles/globals.css';

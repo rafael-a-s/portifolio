@@ -1,10 +1,9 @@
 'use client';
 import style from '../../styles/About.module.css';
 import Button from '../../public/components/button/button';
-import avatar from '../../public/images/avatar.png';
+import avatar from '../../public/images/rafa3.png';
 import React from 'react';
 import { useEffect } from 'react';
-import ScrollReveal from 'scrollreveal';
 import { configScrollReveal } from '../../public/config/configScrollReveal';
 
 export default function Page() {
@@ -28,6 +27,7 @@ export default function Page() {
   return ( 
     <section className={style.about} id={style.about}>
       <div ref={refToImg} className={style.about_img}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={avatar.src} alt="Imagem do um desenvolvedor" />
       </div>
       <div ref={refToContent} className={style.about_content}>

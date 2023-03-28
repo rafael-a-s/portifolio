@@ -40,7 +40,8 @@ export default function Page() {
       <h2 ref={refToComponent} className={style.heading}>Meus <span>Projetos</span></h2>
       <div className={style.portifolio_container} >
         {projects.map((project, index) => (
-          <div ref={refToBox} className={style.portifolio_box}>
+          <div key={index} ref={refToBox} className={style.portifolio_box}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={`${project.img_url ?  project.img_url  : avatar.src}`} alt="Imagem do projeto" />
           <div className={style.portifolio_layer}>
             <h4>{project.name}</h4>
