@@ -7,6 +7,7 @@ import React from 'react';
 import { configScrollReveal } from '../../public/config/configScrollReveal';
 import { Projects } from '../../public/projects/Projects';
 import { Service } from '../../public/projects/service';
+import Image from 'next/image';
 
 export default function Page() {
 
@@ -42,7 +43,16 @@ export default function Page() {
         {projects.map((project, index) => (
           <div key={index} ref={refToBox} className={style.portifolio_box}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={`${project.img_url ?  project.img_url  : avatar.src}`} alt="Imagem do projeto" />
+          <Image loading='lazy' 
+            src={`${project.img_url ?  project.img_url  : avatar.src}`}  
+            width={1000} 
+            height={1000} 
+            style={{
+              maxWidth: 'auto',
+              height: 'auto',
+            }}
+            quality={100} 
+            alt="Imagem do projeto" />
           <div className={style.portifolio_layer}>
             <h4>{project.name}</h4>
             <p>{project.description}</p>
